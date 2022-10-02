@@ -4,31 +4,30 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
+  <title>Generate Password | Home</title>
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  <!-- Local JS -->
-  <script src="index.js"></script>
-  <title>Generate Password</title>
 </head>
 <body class="bg-light">
   <div class="container d-flex justify-content-center align-items-center min-vh-100 flex-column">
-    <div class="d-block bg-info rounded-4 p-2 mb-3 text-center">
-      <h2>PASSWORD GENERATOR</h2>
+    <div class="d-block bg-info rounded-4 p-3 mb-3 text-center">
+      <h2 class="fw-bold">PASSWORD GENERATOR</h2>
     </div>
-    <p class="text-center text-wrap">Masukan jumlah panjang password anda, maka generator akan memberikan password yang sesuai dengan panjang password.</p>
-    <form action="">
-      <div class="d-flex flex-column">
-        <label for="jumlah__Password">Panjang Password</label>
-        <input type="number" id="jumlah__password" required>
-        <label for="value__Password">Password</label>
-        <input type="password" id="value__password" disabled>
-      </div>
-      <div class="d-flex align-items-center gap-2 mt-3">
-        <input type="submit" value="Generate Password" class="btn btn-primary">
-        <input type="submit" value="Save Password" class="btn btn-success" ></input>
-      </div>
-    </form>
-    
-  </div>
-</body>
+    <p class="text-center text-wrap ">Please input your password length for generate your random password with this machine.</p>
+    <div class="d-flex flex-column gap-1">
+      <label for="password__Length" class="fw-bold">Panjang Password:</label>
+      <input type="number" id="password__Length">
+      <label for="value__password" class="fw-bold">Password:</label>
+      <input type="password" id="value__password">
+      <button onclick="copyText()" class="mt-2 mb-3 align-items-end"><small>copy text</small></button>
+      <button type="button" class="btn btn-dark btn-lg mt-2 fw-bold" onclick="getPassword()">Generate Password</button>
+      <a type="button" id="save__button" class="btn btn-outline-success btn-lg mt-2 fw-bold" onclick="savePassword()">Save Password</a>
+    </div>
+    <small class="mt-4 text-lg-center">Happy Automation 😁</h5>
+    </div>
+    <!-- Local JS -->
+    <script src="index.js"></script>
+    <!-- CDN JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
